@@ -5,10 +5,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-      - name: Install node.js
-        uses: actions/setup-nodejs@v3
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: "Install node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
       - name: Run Command npm install
               run: npm install
 
