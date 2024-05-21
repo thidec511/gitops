@@ -10,8 +10,10 @@ jobs:
     steps:
       - name: short_sha commit
         id: short_sha
+        env:
+          SHA ${{github.sha}}
         run: 
-          echo "sha_short=${github.sha::7}" >> $GITHUB.OUTPUT
+          echo "sha_short=${SHA::7"} >> $GITHUB.OUTPUT
       - name: call url
         run: |
           curl --request POST \
