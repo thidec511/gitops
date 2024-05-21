@@ -13,8 +13,8 @@ jobs:
         with: 
           node-version: 'lts/*'
       - name: run test
-      shell: bash
-      run:  |
-        npm install
-        npm test
+        shell: bash
+        run: |
+          npm install
+          npm test
   
