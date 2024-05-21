@@ -11,7 +11,7 @@ jobs:
       - name: "Install node.js"
         uses: actions/setup-node@v4
       - name: "install dependencies"
-         run: npm install
+        run: npm install
   job2:
     runs-on: ubuntu-latest
     needs: 
