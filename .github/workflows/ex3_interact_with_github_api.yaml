@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: short_sha commit
-      id: short_sha
-      run: 
-        echo sha_short="github.sha::7" >> $GITHUB.OUTPUT
+        id: short_sha
+        run: 
+          echo sha_short="github.sha::7" >> $GITHUB.OUTPUT
       - name: call url
         run: |
           curl --request POST \
@@ -23,4 +23,4 @@ jobs:
             "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ steps.short_sha.outputs.sha_short }}_."
             }' \
           --fail  
-  
+    
