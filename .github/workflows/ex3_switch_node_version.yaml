@@ -6,13 +6,13 @@ jobs:
   run_npm-test:
     runs-on: ubuntu-latest
     steps:
-      -name: checkout
+      - name: checkout
         uses: actions/checkout@v4
-      -name: setup node
+      - name: setup node
         uses: actions/setup-node@v4
         with: 
           node-version: 'lts/*'
-      -name: run test
+      - name: run test
       shell: bash
       run:  |
         npm install
